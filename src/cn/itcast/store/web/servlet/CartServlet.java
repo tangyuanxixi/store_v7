@@ -99,7 +99,7 @@ public class CartServlet extends BaseServlet {
 			request.setAttribute("msg", "用户未登录，请登录后再提交");
 			return "/jsp/info.jsp";
 		}
-		
+		//创建用户
 		
 		//重定向
 		response.sendRedirect("/store_v7/jsp/cart.jsp");
