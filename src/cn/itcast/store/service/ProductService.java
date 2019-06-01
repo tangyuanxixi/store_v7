@@ -15,4 +15,6 @@ public interface ProductService {
 	public Product finProductInfoByPid(String pid)throws SQLException;
 	public PageModel findProductsByCidWithPage(String cid, int curPage)throws SQLException;
 	public Product findProductByPid(String pid)throws SQLException;
+	public PageModel findAllProduct(int curNum)throws SQLException;
+	
 }

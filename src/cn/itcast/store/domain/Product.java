@@ -96,6 +96,7 @@ public class Product {
 				+ shop_price + ", pimage=" + pimage + ",  is_hot=" + is_hot + ", pdesc=" + pdesc
 				+ ", pflag=" + pflag + ", cid=" + cid + "]";
 	}
+
 	
 	
 }

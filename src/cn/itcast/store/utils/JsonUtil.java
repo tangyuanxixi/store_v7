@@ -37,7 +37,7 @@ public class JsonUtil {
 	 * @param list
 	 * @return
 	 */
-	public static String list2json(List list){
+	public static String list2json(List<?> list){
 		
 		JSONArray jsonArray = JSONArray.fromObject(list);
 		return jsonArray.toString();
@@ -50,7 +50,7 @@ public class JsonUtil {
 	 * @param map
 	 * @return
 	 */
-	public static String map2json(Map map){
+	public static String map2json(Map<?, ?> map){
 		
 		JSONObject jsonObject = JSONObject.fromObject(map);
 		return jsonObject.toString();

@@ -1,4 +1,6 @@
-<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <html>
 	<head>
 		<meta http-equiv="Content-Language" content="zh-cn">
@@ -27,16 +29,15 @@ TH {
 		<link href="${pageContext.request.contextPath}/css/Style1.css" rel="stylesheet" type="text/css">
 	</HEAD>
 	<body>
-		<table width="100%" height="70%"  border="0" cellspacing="0" cellpadding="0">
+<%-- 		<table width="100%" height="70%"  border="0" cellspacing="0" cellpadding="0">
 			<tr>
-				<td>
-					<img width="100%" src="${pageContext.request.contextPath}/img/admin/top_01.jpg">
-				</td>
-
 				<td width="100%" background="${pageContext.request.contextPath}/img/admin/top_100.jpg">
 				</td>
 			</tr>
-		</table>
+		</table> --%>
+		<a href="#">
+			<img src="${pageContext.request.contextPath}/img/admin/top_100.jpg" width="100%" height="70%" border="0" cellspacing="0" cellpadding="0">
+		</a>
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<tr>
 				<td height="30" valign="bottom" background="${pageContext.request.contextPath}/img/admin/mis_01.jpg">
@@ -45,11 +46,11 @@ TH {
 							<td width="85%" align="left">
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								<font color="#000000"> <script language="JavaScript">
-<!--
+
 tmpDate = new Date();
 date = tmpDate.getDate();
 month= tmpDate.getMonth() + 1 ;
-year= tmpDate.getYear();
+year= tmpDate.getYear()+1900;
 document.write(year);
 document.write("年");
 document.write(month);
@@ -73,7 +74,7 @@ document.write(myArray[weekday])
 else
 {document.write(myArray[weekday])
 };
-// -->
+
 									</script> </font>
 							</td>
 							<td width="15%">

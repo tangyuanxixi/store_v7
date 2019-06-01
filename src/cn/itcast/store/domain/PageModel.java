@@ -17,7 +17,7 @@ public class PageModel {
 	private int prePageNum;//上一页							    *
 	private int nextPageNum;//下一页							    *
 	
-	private List list;//已经分好页的结果集,该list中只有10条记录
+	private List<?> list;//已经分好页的结果集,该list中只有10条记录
 	
 	
 	
@@ -171,11 +171,11 @@ public class PageModel {
 		this.nextPageNum = nextPageNum;
 	}
 
-	public List getList() {
+	public List<?> getList() {
 		return list;
 	}
 
-	public void setList(List list) {
+	public void setList(List<?> list) {
 		this.list = list;
 	}
 

@@ -1,22 +1,16 @@
 package cn.itcast.store.web.servlet;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
+
 import java.sql.SQLException;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
+
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.beanutils.BeanUtils;
-import org.apache.commons.beanutils.ConvertUtils;
-import org.apache.commons.beanutils.converters.DateConverter;
-
-import cn.itcast.store.dao.daoImp.UserDaoImp;
 import cn.itcast.store.domain.User;
 import cn.itcast.store.service.UserService;
 import cn.itcast.store.service.serviceImp.UserServiceImp;

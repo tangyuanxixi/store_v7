@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import cn.itcast.store.domain.Cart;
 import cn.itcast.store.domain.CartItem;
 import cn.itcast.store.domain.Product;
-import cn.itcast.store.domain.User;
+
 import cn.itcast.store.service.serviceImp.ProductServiceImp;
 import cn.itcast.store.web.base.BaseServlet;
 
@@ -83,28 +83,7 @@ public class CartServlet extends BaseServlet {
 		response.sendRedirect("/store_v7/jsp/cart.jsp");
 		return null;
 	}
-	/**
-	 * 提交订单saveOrder
-	 * @param request
-	 * @param response
-	 * @return
-	 * @throws Exception
-	 */
-	public String saveOrder(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-		User user = (User) request.getSession().getAttribute("userLogin");//获取到用户是否登录
-		//如果用户未登录，提示用户登录
-		if(user == null)
-		{
-			request.setAttribute("msg", "用户未登录，请登录后再提交");
-			return "/jsp/info.jsp";
-		}
-		//创建用户
-		
-		//重定向
-		response.sendRedirect("/store_v7/jsp/cart.jsp");
-		return null;
-	}
 }
 
 

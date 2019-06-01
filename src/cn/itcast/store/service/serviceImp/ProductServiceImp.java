@@ -31,9 +31,8 @@ public class ProductServiceImp implements ProductService {
 
 	@Override
 	public Product finProductInfoByPid(String pid) throws SQLException {
-		ProductDao productDao = new ProductDaoImp();
-		Product product = productDao.finProductInfoByPid(pid);
-		return product;
+		Product productInfo= product.finProductInfoByPid(pid);
+		return productInfo;
 	}
 
 	@Override
@@ -55,5 +54,18 @@ public class ProductServiceImp implements ProductService {
 		
 		return product.findProductByPid(pid);
 	}
+	@Override
+	public PageModel findAllProduct(int curNum)throws SQLException {
+		
+		int totalRecords = product.findTotalRecords();
+		PageModel pm = new PageModel(curNum, totalRecords, 10);
+		List<Product> list = product.findProductsWithPage(pm.getStartIndex(), pm.getPageSize());
+		pm.setList(list);
+		pm.setUrl("AdminProductServlet?method=findAllProduct");
+		return pm;
+		
+	}
+
+
 
 }

@@ -125,9 +125,5 @@ public class JDBCUtils {
 			e.printStackTrace();
 		}
 	}
-	public static void main(String[] args) throws SQLException {
-		System.out.println(getConnection());
-		Connection connection = getConnection();
-	
-	}
+
 }
