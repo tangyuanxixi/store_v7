@@ -1,6 +1,7 @@
 package cn.itcast.store.dao.daoImp;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.dbutils.QueryRunner;
@@ -80,6 +81,13 @@ public class ProductDaoImp implements ProductDao {
 		Object[] params = {startIndex, pageSize};
 		List<Product> list = qr.query(sql, new BeanListHandler<Product>(Product.class),params);
 		return list;
+	}
+	@Override
+	public void saveProduct(Product pro) throws SQLException {
+		String sql = "insert into product(pid,pname,market_price,shop_price,pimage,pdate,is_hot,pdesc,pflag,cid)values(?,?,?,?,?,?,?,?,?,?)";
+		QueryRunner qr = new QueryRunner(JDBCUtils.getDataSource());
+		Object[] params = {pro.getPid(),pro.getPname(),pro.getMarket_price(),pro.getShop_price(),pro.getPimage(),new Date(),pro.getIs_hot(),pro.getPdesc(),pro.getPflag(),pro.getCid()};
+		qr.update(sql, params);
 	}
 
 }

@@ -86,7 +86,7 @@
     <servlet-name>AdminCategoryServlet</servlet-name>
     <url-pattern>/AdminCategoryServlet</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <description></description>
     <display-name>AdminProductServlet</display-name>
     <servlet-name>AdminProductServlet</servlet-name>
@@ -107,5 +107,24 @@
     <url-pattern>/jsp/order_info.jsp</url-pattern>
     <url-pattern>/jsp/order_list.jsp</url-pattern>
   </filter-mapping>
-
+  <servlet>
+    <description></description>
+    <display-name>AdminOrderServlet</display-name>
+    <servlet-name>AdminOrderServlet</servlet-name>
+    <servlet-class>cn.itcast.store.web.servlet.AdminOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminOrderServlet</servlet-name>
+    <url-pattern>/AdminOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminServlet</display-name>
+    <servlet-name>AdminServlet</servlet-name>
+    <servlet-class>cn.itcast.store.web.servlet.AdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/AdminServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

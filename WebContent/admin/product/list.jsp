@@ -8,7 +8,7 @@
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/public.js"></script>
 		<script type="text/javascript">
 			function addProduct(){
-				window.location.href = "${pageContext.request.contextPath}/admin/product/add.jsp";
+				window.location.href = "${pageContext.request.contextPath}/AdminProductServlet?method=findAllCats";
 			}
 		</script>
 	</HEAD>
@@ -106,33 +106,7 @@
 							</table>
 						</td>
 					</tr>
-<%-- 					<tr align="center">
-						<td colspan="7">
-							第${ pageBean.currPage }/${ pageBean.totalPage }页 &nbsp; &nbsp; &nbsp;
-							总记录数:${ pageBean.totalCount }  &nbsp; 每页显示:${ pageBean.pageSize }
-							<c:if test="${ pageBean.currPage != 1 }">
-								<a href="${ pageContext.request.contextPath }/AdminProductServlet?method=findByPage&currPage=1">首页</a>|
-								<a href="${ pageContext.request.contextPath }/AdminProductServlet?method=findByPage&currPage=${ pageBean.currPage - 1}">上一页</a>|
-							</c:if>
-							&nbsp; &nbsp;
-							
-							<c:forEach var="i" begin="1" end="${ pageBean.totalPage }">
-								<c:if test="${ pageBean.currPage == i }">
-									[${ i }]
-								</c:if>
-								<c:if test="${ pageBean.currPage != i }">
-									<a href="${ pageContext.request.contextPath }/AdminProductServlet?method=findByPage&currPage=${ i}">[${ i }]</a>
-								</c:if>
-							</c:forEach>
-							
-							&nbsp; &nbsp;
-							<c:if test="${ pageBean.currPage != pageBean.totalPage }">
-								<a href="${ pageContext.request.contextPath }/AdminProductServlet?method=findByPage&currPage=${ pageBean.currPage + 1}">下一页</a>|
-								<a href="${ pageContext.request.contextPath }/AdminProductServlet?method=findByPage&currPage=${ pageBean.totalPage}">尾页</a>|
-							</c:if>	
-						</td>
-					</tr> --%>
-					
+
 				</TBODY>
 				
 			</table>

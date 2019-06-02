@@ -65,6 +65,12 @@ public class ProductServiceImp implements ProductService {
 		return pm;
 		
 	}
+	@Override
+	public void saveProduct(Product pro)throws SQLException {
+		
+		product.saveProduct(pro);
+		
+	}
 
 
 

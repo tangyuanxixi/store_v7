@@ -23,4 +23,6 @@ public interface ProductDao {
 
 	public List<Product> findProductsWithPage(int startIndex, int pageSize)throws SQLException;
 
+	public void saveProduct(Product pro)throws SQLException;
+
 }
